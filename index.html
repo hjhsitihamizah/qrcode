@@ -25,7 +25,7 @@
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             if(urlParams.has('str')){
-                dist = urlParams.get('str');
+                dist = document.write(urlParams.get('str'));
             }else{
                 dist = "";
             }
