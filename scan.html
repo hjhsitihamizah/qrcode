@@ -17,9 +17,9 @@
             <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
             <canvas id="canvas" hidden></canvas>
             <div id="output" hidden></div>
-            <div id="outputMessage">No QR code detected.</div>
-            <div id="try"></div>
-            <div hidden><b>Data:</b> <span id="outputData"></span></div>
+            <div id="outputMessage">No QR code detected.</div>    
+            <div hidden><b>Data:</b> <span id="outputData"></span></div
+            <p id="try"></p>
         </div>
     </div>
 
@@ -85,8 +85,8 @@
                     if (code.data != null) {
                         // window.open(code.data, "_self")
                         //canvas.stop();
-                        let qr_text = code.data;
-                        document.getElementById("try") = qr_text;
+                        
+                        document.getElementById("try") = code.data;
                         //window.location.href = "index.html?str=" + code.data
 
                     }
