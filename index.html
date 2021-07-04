@@ -20,14 +20,13 @@
         </div>
     </div>
     <script>
-    function check()
-        {            
+             
             var dist = window.location.search;
             document.getElementById("demo").innerHTML = dist;
             const urlParams = new URLSearchParams(dist);
             const str = urlParams.get('str');
             document.getElementById("qr_text").innerHTML = str;
-        }
+        
     </script>
 </body>
 
