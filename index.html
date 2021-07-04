@@ -14,15 +14,16 @@
         <div class="col-md-6 mt-5">
             <h2>Scan QR Code</h2>
             <a href="scan.html"><button>Scan QR</button></a>
+            <p id="demo"></p>
             <p id="qr_text"></p>
             
         </div>
     </div>
     <script>
     function check()
-        {
-            //document.getElementById("demo").innerHTML = dist;
+        {            
             var dist = window.location.search;
+            document.getElementById("demo").innerHTML = dist;
             const urlParams = new URLSearchParams(dist);
             const str = urlParams.get('str');
             document.getElementById("qr_text").innerHTML = str;
