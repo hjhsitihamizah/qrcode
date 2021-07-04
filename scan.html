@@ -18,6 +18,7 @@
             <canvas id="canvas" hidden></canvas>
             <div id="output" hidden></div>
             <div id="outputMessage">No QR code detected.</div>
+            <div id="try"></div>
             <div hidden><b>Data:</b> <span id="outputData"></span></div>
         </div>
     </div>
@@ -80,10 +81,13 @@
                     outputData.parentElement.hidden = false;
                     //output value of the qr code
                     outputData.innerText = code.data;
+                             
                     if (code.data != null) {
                         // window.open(code.data, "_self")
                         //canvas.stop();
-                        window.location.href = "index.html?str=" + code.data
+                        let qr_text = code.data;
+                        document.getElementById("try") = qr_text;
+                        //window.location.href = "index.html?str=" + code.data
 
                     }
                 } else {
